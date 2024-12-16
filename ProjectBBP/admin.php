@@ -62,10 +62,11 @@ $hasil = $mysqli -> query("SELECT * FROM antrian");
                         <?php endif; ?>
                     </form>
 
-                    <form method="POST" action="update_a.php" style="display:inline;">
+                    <form method="POST" action="update.php" style="display:inline;">
+                        <input type="hidden" name="id" value="<?= $dat['id'] ?>">
                         <button type="submit" name="update">Update</button>
                     </form>
-
+                    
                     <form method="POST" style="display:inline;">
                         <input type="hidden" name="id" value="<?= $dat['id'] ?>">
                         <button type="submit" name="delete">Delete</button>
@@ -75,13 +76,12 @@ $hasil = $mysqli -> query("SELECT * FROM antrian");
                 </tr>
         <?php endforeach; ?>
     </table>
-
-    <br>
-    <form method="POST" action="tambah_a.php" style="display:inline;">
+                 <br>
+                    <form method="POST" action="tambah_a.php" style="display:inline;">
                         <button type="submit" name="tambah">Tambah resiko</button>
                     </form>
-    <br>
-    <br>
+                <br>
+            <br>
     <a href="index.php">Logout</a>
 </body>
 </html>
